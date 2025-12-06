@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CosmicShutter</title>
+    <title>CosmicShutter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+    <style>
+     #banner {
+        height: 300px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+     }
+   </style>
+    <head>
         <style>
             h1 {
                 text-align: right;
-                font-size: 50px;
+                font-size: 60px;
                 font-family: Arial;
             }
             
-                #banner {
-                    height: 360px;
-                    width: 100%;
-                    object-fit:cover;
-                    margin-bottom: 16px;
-      }
+        
             p {
                 text-align: right;
                 font-size: 10;
                 font-family: Arial;
                 color: rgb(100, 100, 100)
             }
+
+            #container {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .buttons button {
+                 margin-right: 10px;
+        }
         </style>
     </head>
     <body>
-       <h1>CosmicShutter</h1>
-       <p> Astrophotography by Erika Denise Encinas<p>
-       <img id="banner" src="http://127.0.0.1:5000/static/milkyway.jpg">
+       <div id="container">
+       <h1 class="text-right mt-2"> CosmicShutter</h1>
+       <p class="text-right mt-0"> Astrophotography by Erika Denise Encinas<p>
+       <img class="img-fluid" id="banner" src="http://127.0.0.1:5000/static/milkyway.jpg">
+       <div>
+        <div class="buttons" style="text-align: center;">
+        <button class="btn btn-outline-primary btn-ig">Home
+        <button class="btn btn-outline-primary btn-ig">Images
+        <button class="btn btn-outline-primary btn-ig">Equipment
+        <button class="btn btn-outline-primary btn-ig">News
+        <button class="btn btn-outline-primary btn-ig">About me
+        </div>
+            <p class="text-center mt-4"> Copryright © 2024 by Erika Denise Encinas. All rights reserved.<p>
     </body>
 </html> 
