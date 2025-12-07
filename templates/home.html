@@ -45,7 +45,46 @@
     <div id="container"> 
     <h1 class="text-end mt-2">CosmicShutter</h1>
     <p class="text-end mt-0">Astrophotography by Erika Denise Encinas</p>
-    <img class="img-fluid mb-0" id="banner" src="http://127.0.0.1:5000/static/milkyway.jpg">
+    
+  <div class="container mt-5">
+  <div class="row align-items-center border border-3 border-dark shadow-lg bg-white p-4 rounded">
+
+   <div>
+  <img id="banner" 
+       src="{{ url_for('static', filename='milkyway.jpg') }}" 
+       class="img-fluid rounded shadow clickable-img"
+       alt="Profile Image"
+       style="max-width: 100%; height: 400px; cursor: pointer;"
+       data-bs-toggle="modal"
+       data-bs-target="#imageModal"
+       data-bs-img="{{ url_for('static', filename='milkyway.jpg') }}">
+</div>
+   
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="" class="img-fluid w-100 rounded" alt="Full View">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const modalImage = document.getElementById('modalImage');
+  const clickableImgs = document.querySelectorAll('.clickable-img');
+
+  clickableImgs.forEach(img => {
+    img.addEventListener('click', function() {
+      modalImage.src = this.dataset.bsImg;
+    });
+  });
+</script> 
+
     <div class="buttons mt-4" style="text-align: center;">
         <a href="/" class="btn btn-secondary">Home</a>
         <a href="/images" class="btn btn-secondary">Images</a>
