@@ -52,18 +52,65 @@
         <a href="/equipment" class="btn btn-secondary">Equipment</a>
         <a href="/news" class="btn btn-secondary">News</a>
         <a href="/about" class="btn btn-secondary">About Me</a>
-        <div class="container mt-4">
-            <h2> Welcome to CosmicShutter! </h2>
-  <p class="text-start">
-    Astrophotography gives me chills every time I point my lens at the night sky. 
-    The stars, planets, and deep sky objects seem so distant, yet so close through the camera. 
-    Each shot captures a moment of the universe’s beauty, leaving me in awe. 
-    Sharing these glimpses of the cosmos allows others to feel the wonder I experience under the stars.
-  </p>
-  <p class="text-start">
-    - Erika Denise Encinas
-  </p>
+    </div>
+
+  <div class="container mt-5">
+  <div class="row align-items-center border border-3 border-dark shadow-lg bg-white p-4 rounded">
+
+    <div class="col-md-4 text-center mb-3 mb-md-0">
+      <img src="{{ url_for('static', filename='aboutme.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img"
+           alt="Profile Image"
+           style="max-width: 200px; cursor: pointer;"
+           data-bs-toggle="modal"
+           data-bs-target="#imageModal"
+           data-bs-img="{{ url_for('static', filename='aboutme.jpg') }}">
+    </div>
+
+    <div class="col-md-8">
+      <h3>About Me</h3>
+      <p class="text-start">
+        I have been capturing the night sky since 2020 under the clear skies of Larap, Camarines Norte, Philippines.
+        I am a cum laude graduate in Astronomy, majoring in Astrophysics, from Rizal Technological University.
+        Driven by a deep curiosity about the universe, I continually explore astronomy while sharing the beauty of the cosmos through my photography.
+      </p>
+
+      <p class="text-start">
+         For inquiries or collaborations, please feel free to contact me at 
+        <a href="mailto:erikadenise79@gmail.com">erikadenise79@gmail.com</a>.
+      </p>
+    </div>
+
+  </div>
 </div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="" class="img-fluid w-100 rounded" alt="Full View">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const modalImage = document.getElementById('modalImage');
+  const clickableImgs = document.querySelectorAll('.clickable-img');
+
+  clickableImgs.forEach(img => {
+    img.addEventListener('click', function() {
+      modalImage.src = this.dataset.bsImg;
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
     <div class="buttons mt-4" style="text-align: center;">
         <a href="https://www.facebook.com/erikaxdenise" class="btn btn-link">Facebook</a>
         <a href="https://www.instagram.com/deniseencinas_/" class="btn btn-link">Instagram</a>

@@ -52,19 +52,24 @@
         <a href="/equipment" class="btn btn-secondary">Equipment</a>
         <a href="/news" class="btn btn-secondary">News</a>
         <a href="/about" class="btn btn-secondary">About Me</a>
-        <div class="container mt-4">
-            <h2> Welcome to CosmicShutter! </h2>
-  <p class="text-start">
-    Astrophotography gives me chills every time I point my lens at the night sky. 
-    The stars, planets, and deep sky objects seem so distant, yet so close through the camera. 
-    Each shot captures a moment of the universe’s beauty, leaving me in awe. 
-    Sharing these glimpses of the cosmos allows others to feel the wonder I experience under the stars.
-  </p>
-  <p class="text-start">
-    - Erika Denise Encinas
-  </p>
+
+       <div class="container mt-5">
+    <div class="card border-0 mx-auto" style="max-width: 250px;">
+        <div class="card-header bg-secondary text-white fw-bold rounded-0 text-center">
+            Images
+        </div>
+        <div class="list-group list-group-flush text-center">
+            <a href="{{ url_for('moon') }}" class="list-group-item list-group-item-action list-group-item-light">Moon</a>
+            <a href="{{ url_for('planets') }}" class="list-group-item list-group-item-action list-group-item-light">Planets</a>
+            <a href="{{ url_for('eclipse') }}" class="list-group-item list-group-item-action list-group-item-light">Eclipse</a>
+            <a href="{{ url_for('milkyway') }}" class="list-group-item list-group-item-action list-group-item-light">Milkyway</a>
+            <a href="{{ url_for('comets') }}" class="list-group-item list-group-item-action list-group-item-light">Comets</a>
+            <a href="{{ url_for('dso') }}" class="list-group-item list-group-item-action list-group-item-light">Deep Sky Objects</a>
+        </div>
+    </div>
 </div>
-    <div class="buttons mt-4" style="text-align: center;">
+    
+     <div class="buttons mt-4" style="text-align: center;">
         <a href="https://www.facebook.com/erikaxdenise" class="btn btn-link">Facebook</a>
         <a href="https://www.instagram.com/deniseencinas_/" class="btn btn-link">Instagram</a>
         <a href="https://www.tiktok.com/@astrodenx" class="btn btn-link">TikTok</a>

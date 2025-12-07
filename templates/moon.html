@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>CosmicShutter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+    <style>
+     #banner {
+        height: 300px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+     }
+   </style>
+    <head>
+        <style>
+            h1 {
+                text-align: right;
+                font-size: 60px;
+                font-family: Arial;
+            }
+            
+        
+            p {
+                text-align: right;
+                font-size: 10;
+                font-family: Arial;
+                color: rgb(100, 100, 100)
+            }
+
+            #container {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .buttons button {
+                 margin-right:5px;
+        }
+        </style>
+    </head>
+    <body>
+   <div class="border border-5 border-dark shadow-lg" style="max-width: 900px; margin: 20px auto; padding: 20px; border-radius: 10px;">
+    <div id="container"> 
+    <h1 class="text-end mt-2">CosmicShutter</h1>
+    <p class="text-end mt-0">Astrophotography by Erika Denise Encinas</p>
+    <img class="img-fluid mb-0" id="banner" src="http://127.0.0.1:5000/static/milkyway.jpg">
+    <div class="buttons mt-4" style="text-align: center;">
+        <a href="/" class="btn btn-secondary">Home</a>
+        <a href="/images" class="btn btn-secondary">Images</a>
+        <a href="/equipment" class="btn btn-secondary">Equipment</a>
+        <a href="/news" class="btn btn-secondary">News</a>
+        <a href="/about" class="btn btn-secondary">About Me</a>
+</div>
+<div class="container mt-5">
+  <div class="row g-3 justify-content-center">
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon1.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon1.jpg') }}">
+    </div>
+
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon2.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon2.jpg') }}">
+    </div>
+
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon3.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon3.jpg') }}">
+    </div>
+     <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon4.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 4" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon4.jpg') }}">
+    </div>
+     <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon5.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 5" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon5.jpg') }}">
+    </div>
+     <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon6.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 6" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon6.jpg') }}">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon7.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 7" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon7.jpg') }}">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon8.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 8" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon8.jpg') }}">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon9.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 9" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon9.jpg') }}">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon10.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 10" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon10.jpg') }}">
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="{{ url_for('static', filename='moon11.jpg') }}" 
+           class="img-fluid rounded shadow clickable-img" 
+           style="cursor: pointer;" 
+           alt="Moon 11" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-img="{{ url_for('static', filename='moon11.jpg') }}">
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="modalImage" src="" class="img-fluid w-100 rounded" alt="Full View">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const modalImage = document.getElementById('modalImage');
+  const clickableImgs = document.querySelectorAll('.clickable-img');
+
+  clickableImgs.forEach(img => {
+    img.addEventListener('click', function() {
+      modalImage.src = this.dataset.bsImg;
+    });
+  });
+</script>
+
+    <div class="buttons mt-4" style="text-align: center;">
+        <a href="https://www.facebook.com/erikaxdenise" class="btn btn-link">Facebook</a>
+        <a href="https://www.instagram.com/deniseencinas_/" class="btn btn-link">Instagram</a>
+        <a href="https://www.tiktok.com/@astrodenx" class="btn btn-link">TikTok</a>
+      <p class="text-center m-0 p-3 text-dark" style="background-color: #a3a5a9; border: 1px solid #596068; border-radius: 5px;">
+        © 2024, Erika Denise Encinas. All rights reserved.
+      </p>
+      </div>
+</html> 
+
+
