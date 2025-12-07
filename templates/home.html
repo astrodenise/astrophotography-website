@@ -46,7 +46,7 @@
     <h1 class="text-end mt-2">CosmicShutter</h1>
     <p class="text-end mt-0">Astrophotography by Erika Denise Encinas</p>
     
-    <img class="img-fluid mb-0" id="banner" src="http://127.0.0.1:5000/static/milkyway.jpg">
+    <img class="img-fluid mb-0" id="banner" src="{{ url_for('static', filename='milkyway.jpg') }}">
 
     <div class="buttons mt-4" style="text-align: center;">
         <a href="/" class="btn btn-secondary">Home</a>
